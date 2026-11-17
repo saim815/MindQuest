@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-[#050114] text-zinc-100 font-sans antialiased selection:bg-pink-800/60 selection:text-white;
+  }
+}
+
+/* Custom gorgeous scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 10, 180, 0.2);
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 10, 180, 0.1);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 10, 180, 0.4);
+}
+
+/* Keyframes & helper classes for party glow */
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse-neon {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(255, 0, 171, 0.4), 0 0 20px rgba(157, 78, 221, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 0, 171, 0.8), 0 0 35px rgba(0, 240, 255, 0.5);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 15s linear infinite;
+}
+
+.animate-pulse-neon {
+  animation: pulse-neon 4s ease-in-out infinite;
+}
+
+.shadow-neon-pink {
+  box-shadow: 0 0 15px rgba(255, 0, 171, 0.35);
+}
+
+.shadow-neon-cyan {
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.35);
+}
+
+.shadow-neon-purple {
+  box-shadow: 0 0 15px rgba(157, 78, 221, 0.35);
+}
+

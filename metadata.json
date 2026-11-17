@@ -1,0 +1,6 @@
+{
+  "name": "CertIQ",
+  "description": "A collaborative AI workspace to supercharge your learning journey and map out high-income, remote career paths.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
